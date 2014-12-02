@@ -15,6 +15,7 @@
 		657532DF1A2E206900D1E2FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 657532DE1A2E206900D1E2FF /* Images.xcassets */; };
 		657532E21A2E206900D1E2FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657532E01A2E206900D1E2FF /* LaunchScreen.xib */; };
 		657532EE1A2E206900D1E2FF /* SceneDelegationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657532ED1A2E206900D1E2FF /* SceneDelegationTests.swift */; };
+		657532F81A2E220D00D1E2FF /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657532F71A2E220D00D1E2FF /* MenuScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		657532E71A2E206900D1E2FF /* SceneDelegationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SceneDelegationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		657532EC1A2E206900D1E2FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		657532ED1A2E206900D1E2FF /* SceneDelegationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegationTests.swift; sourceTree = "<group>"; };
+		657532F71A2E220D00D1E2FF /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				657532D31A2E206900D1E2FF /* AppDelegate.swift */,
-				657532D51A2E206900D1E2FF /* GameScene.sks */,
 				657532D71A2E206900D1E2FF /* GameScene.swift */,
+				657532F71A2E220D00D1E2FF /* MenuScene.swift */,
 				657532D91A2E206900D1E2FF /* GameViewController.swift */,
 				657532DB1A2E206900D1E2FF /* Main.storyboard */,
 				657532DE1A2E206900D1E2FF /* Images.xcassets */,
 				657532E01A2E206900D1E2FF /* LaunchScreen.xib */,
+				657532D51A2E206900D1E2FF /* GameScene.sks */,
 				657532D11A2E206900D1E2FF /* Supporting Files */,
 			);
 			path = SceneDelegation;
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				657532D81A2E206900D1E2FF /* GameScene.swift in Sources */,
+				657532F81A2E220D00D1E2FF /* MenuScene.swift in Sources */,
 				657532DA1A2E206900D1E2FF /* GameViewController.swift in Sources */,
 				657532D41A2E206900D1E2FF /* AppDelegate.swift in Sources */,
 			);

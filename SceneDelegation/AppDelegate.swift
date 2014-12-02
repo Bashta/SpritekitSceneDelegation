@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  SceneDelegation
-//
-//  Created by Alb on 12/2/14.
-//  Copyright (c) 2014 01Logic. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

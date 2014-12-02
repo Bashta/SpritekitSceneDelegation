@@ -1,44 +1,48 @@
-//
-//  GameScene.swift
-//  SceneDelegation
-//
-//  Created by Alb on 12/2/14.
-//  Copyright (c) 2014 01Logic. All rights reserved.
-//
-
 import SpriteKit
 
+protocol GameSceneDelegate {
+	func gameOver()
+}
+
 class GameScene: SKScene {
+	
+	var gameSceneDelegate: GameSceneDelegate?
+	var health: Int = 10
+	var helthLabel = SKLabelNode(fontNamed: "Chalkduster")
+	
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+	
+	/* Setup your scene here */
+        helthLabel.text = "GameScene";
+        helthLabel.fontSize = 20;
+        helthLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+	
+        self.addChild(helthLabel)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
         
         for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
+		
+		  let location = touch.locationInNode(self)
+		  health--
+		  helthLabel.text = "Your health is \(health)"
+		
+		if health <= 0 {
+			self.gameSceneDelegate?.gameOver()
+		}
+	}
     }
-   
+
+	override init(size: CGSize) {
+		super.init(size: size)
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+	    fatalError("init(coder:) has not been implemented")
+	}
+	
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
